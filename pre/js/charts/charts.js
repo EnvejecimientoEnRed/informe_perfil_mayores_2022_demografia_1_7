@@ -1,6 +1,6 @@
 //Desarrollo de las visualizaciones
 import { setChartHeight } from '../modules/height';
-import { setChartCanvas, setChartCanvasImage, setCustomCanvas, setChartCustomCanvasImage } from '../modules/canvas-image';
+import { setChartCanvas, setChartCanvasImage } from '../modules/canvas-image';
 import { setRRSSLinks } from '../modules/rrss';
 import { setFixedIframeUrl } from './chart_helpers';
 
@@ -15,13 +15,11 @@ export function initChart(iframe) {
 
     //Captura de pantalla de la visualización
     setChartCanvas();
-    setCustomCanvas();
 
     let pngDownload = document.getElementById('pngImage');
 
     pngDownload.addEventListener('click', function(){
         setChartCanvasImage('mapa_municipios_personas_mayores');
-        setChartCustomCanvasImage('mapa_municipios_personas_mayores');
     });
 
     //Altura del frame
