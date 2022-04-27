@@ -4,7 +4,7 @@ import { setChartCanvas, setChartCanvasImage } from '../modules/canvas-image';
 import { setRRSSLinks } from '../modules/rrss';
 import { setFixedIframeUrl } from './chart_helpers';
 
-export function initChart(iframe) {
+export function initChart() {
     //Desarrollo del gráfico > Mapa a desarrollar por Joaquín y/o Julia > No hay desarrollo en este JS
 
     //Iframe
@@ -14,7 +14,9 @@ export function initChart(iframe) {
     setRRSSLinks('mapa_municipios_personas_mayores');
 
     //Captura de pantalla de la visualización
-    setChartCanvas();
+    setTimeout(() => {
+        setChartCanvas();
+    }, 3000);
 
     let pngDownload = document.getElementById('pngImage');
 
@@ -23,5 +25,5 @@ export function initChart(iframe) {
     });
 
     //Altura del frame
-    setChartHeight(iframe);
+    setChartHeight();
 }
