@@ -5,7 +5,7 @@ import { setRRSSLinks } from '../modules/rrss';
 import { setFixedIframeUrl } from './chart_helpers';
 
 export function initChart() {
-    //Desarrollo del gráfico > Mapa a desarrollar por Joaquín y/o Julia > No hay desarrollo en este JS
+    //Desarrollo del gráfico > No hay desarrollo en este JS
 
     //Iframe
     setFixedIframeUrl('informe_perfil_mayores_2022_demografia_1_7','mapa_municipios_personas_mayores');
